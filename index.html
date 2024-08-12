@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="body" style="display: flex;  flex-direction: column;align-items: center;  padding: 20px;">
+        <img src="./img_display_error.png" alt=""
+            style="width:15%;min-width: 150px; height:auto;display:inline-block;margin-top: 8%;">
+        <div style="font-weight: bold;font-size: 24px;color: #007AFF;line-height: 22px;margin-top: 30px;">
+            系统维护中...
+        </div>
+        <div style="font-size: 16px;color: #333333;line-height: 22px;margin-top: 20px;">
+            尊敬的用户：您好！系统维护中，暂时无法提供服务请您稍后再试。给您带来的不便，敬请谅解，感谢您的理解与支持。
+        </div>
+        <div class="buttonId"
+            style="width: 138px;height: 40px;background: #007AFF;border-radius: 4px;font-size: 15px;color: #F7F5F2;line-height: 40px;text-align: center;margin-top: 30px; cursor: pointer;">
+            查看IT公告信息
+        </div>
+    </div>
+    <div class="bottom"
+        style="display: flex;justify-content: center;position: fixed;bottom: 0;height: 63px;background: #F8FAFF;width: 100%;">
+        <div style="display: flex;align-items: center;">
+            <img src="./img1_display_error.png" alt="" style="height: 24px;width: auto;margin-right: 6px;" srcset="">
+            Web：itservice.h3c.com
+        </div>
+        <div style="display: flex;align-items: center;margin: 0 20px;">
+            <img src="./img2_display_error.png" alt="" style="height: 24px;width: auto;margin-right: 6px;" srcset="">
+            Tel：400-818-2222 / 0571-86760818
+        </div>
+        <div style="display: flex;align-items: center;">
+            <img src="./img3_display_error.png" alt="" style="height: 24px;width: auto;margin-right: 6px;" srcset="">
+            Email：ithotline@h3c.com
+        </div>
+    </div>
+</body>
+<script>
+    //判断是不是移动端是的话把bottom隐藏
+    if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+        document.querySelector('.bottom').style.display = 'none'
+    }
+    //点击buttonId按钮前往https://eip.h3c.com/home/gonggaoList
+    document.querySelector('.buttonId').addEventListener('click', function () {
+        window.location.href = 'https://eip.h3c.com/home/gonggaoList'
+
+    })
+</script>
+
+</html>
